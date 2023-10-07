@@ -12,30 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Domoftware"
         tools:targetApi="31">
-        <activity
-            android:name=".BienvActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
+
+        <!-- SplashScreenActivity -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Actividad de bienvenida (BienvActivity) -->
+        <activity
+            android:name=".BienvActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Actividad de inicio de sesión (LoginActivity) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+        <!-- Actividad de registro (RegisterActivity) -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
+
+
+

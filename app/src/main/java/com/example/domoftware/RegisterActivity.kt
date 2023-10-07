@@ -13,9 +13,10 @@ class RegisterActivity : AppCompatActivity() {
         // En el método onCreate de RegisterActivity
         val loginButton = findViewById<Button>(R.id.button)
         loginButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, BienvActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 }
