@@ -31,17 +31,34 @@ class MainActivity : AppCompatActivity() {
 
             when(it.itemId) {
 
-                R.id.nav_home -> Toast.makeText(applicationContext,"Clicked Home", Toast.LENGTH_LONG).show()
-                R.id.nav_message -> Toast.makeText(applicationContext,"Clicked Message", Toast.LENGTH_LONG).show()
-                R.id.nav_sync -> Toast.makeText(applicationContext,"Clicked Synch", Toast.LENGTH_LONG).show()
-                R.id.nav_trash -> Toast.makeText(applicationContext,"Clicked Delete", Toast.LENGTH_LONG).show()
-                R.id.nav_settings -> Toast.makeText(applicationContext,"Clicked Setting", Toast.LENGTH_LONG).show()
+                R.id.nav_home -> {
+                    val intent = Intent (this, MainActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_message -> {
+                    val intent = Intent (this,contactActivity::class.java)
+                startActivity(intent)}
+
+                R.id.nav_sync -> {
+                    val intent = Intent (this, SincrActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_settings -> {
+                    val intent =Intent (this,ConfigActivity::class.java)
+                    startActivity(intent)
+                }
                 R.id.nav_login -> {
                     val intent = Intent(this, BienvActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.nav_share -> Toast.makeText(applicationContext,"Clicked Share", Toast.LENGTH_LONG).show()
-                R.id.nav_rate_us -> Toast.makeText(applicationContext,"Clicked Rate us", Toast.LENGTH_LONG).show()
+                R.id.nav_share -> {
+                    val intent = Intent (this,CompaActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_rate_us -> {
+                    val intent = Intent (this,CalifiActivity::class.java)
+                    startActivity(intent)
+                }
 
             }
 

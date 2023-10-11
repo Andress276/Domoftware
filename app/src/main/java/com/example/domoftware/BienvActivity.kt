@@ -31,5 +31,49 @@ override fun onCreate(savedInstanceState: Bundle?) {
         startActivity(intent)
     }
 
+    val drawerLayout : DrawerLayout = findViewById(R.id.drawerlayoutBienv)
+    val navView : NavigationView = findViewById(R.id.nav_viewBienv)
+
+
+    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    navView.setNavigationItemSelectedListener {
+
+        when(it.itemId) {
+
+            R.id.nav_home -> {
+                val intent = Intent (this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_message -> {
+                val intent = Intent (this,contactActivity::class.java)
+                startActivity(intent)}
+
+            R.id.nav_sync -> {
+                val intent = Intent (this, SincrActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_settings -> {
+                val intent = Intent (this,ConfigActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_login -> {
+                val intent = Intent(this, BienvActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_share -> {
+                val intent = Intent (this,CompaActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_rate_us -> {
+                val intent = Intent (this,CalifiActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+
+        true
+    }
 }
+
 }

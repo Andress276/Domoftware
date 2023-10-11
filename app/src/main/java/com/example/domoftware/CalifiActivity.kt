@@ -3,25 +3,16 @@ package com.example.domoftware
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class RegisterActivity : AppCompatActivity() {
+class CalifiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_califi)
 
-        // En el método onCreate de RegisterActivity
-        val loginButton = findViewById<Button>(R.id.button)
-        loginButton.setOnClickListener {
-            val intent = Intent(this, BienvActivity::class.java)
-            startActivity(intent)
-        }
-
-
-        val drawerLayout : DrawerLayout = findViewById(R.id.drawerlayoutReg)
-        val navView : NavigationView = findViewById(R.id.nav_viewReg)
+        val drawerLayout : DrawerLayout = findViewById(R.id.drawerlayoutCalifi)
+        val navView : NavigationView = findViewById(R.id.nav_viewCalifi)
 
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
